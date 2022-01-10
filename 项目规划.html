@@ -1,0 +1,208 @@
+<!doctype html PUBLIC "-//W3C//DTD XHTML 1.0 
+Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; 
+ charset=utf-8"/>
+<title>项目规划</title>
+<link href="CSS/plan.css" type="text/css" rel="stylesheet"/>
+	<style>
+        .lunbo{
+            width:470px;
+            height:350px;
+            margin:10px auto;
+    /*		border:1px solid red;*/
+            position:relative; 
+            /*父元素使用相对定位的目的：（1）保持父元素不动；（2）绝对定位的子元素偏移量是相对父元素*/
+            }
+        .container{
+            
+            }
+		.container img{
+			width:470px;
+			height:350px;}
+        .btns{
+            position:absolute;
+            right:20px;
+            bottom:5px;
+            }
+        .btns a{
+            display:inline-block;
+            width:20px;
+            height:20px;
+            line-height:20px;   /*文字垂直居中*/
+            font-size:14px;
+            text-align:center;  /*文字水平居中*/
+            text-decoration:none;		
+            opacity:0.5;		
+            }
+        .normal{
+            color:#FFF;
+            background-color:red;
+            }
+        .current{
+            color:#000;
+            background-color:yellow;
+            }
+    
+    </style>
+    <script>
+        var now=1;   //变量now代表当前图片，从第一幅图开始
+        var MAX=4;   //代表最大图片数
+        function show()
+        {
+            if(arguments.length>0)  //判断函数调用时有参数传递
+            {
+                now=arguments[0];
+                window.clearTimeout(timer);
+            }
+            for(var i=1;i<=MAX;i++)
+            {
+                if(i==now)
+                {
+                    document.getElementById("img"+i).style.display="block";
+                    document.getElementById("btn"+i).className="current";
+                }
+                else
+                {
+                    document.getElementById("img"+i).style.display="none";
+                    document.getElementById("btn"+i).className="normal";
+                }
+            }
+            if(now==MAX) now=1;
+            else now++;
+            timer=window.setTimeout('show()',2000);
+            /*本效果要使用延时器来实现时间上的循环，原因在于用户可以任意次点击按钮，会造成timer变量里存放的返回值不一样；*/
+        }
+    </script>
+</head>
+
+
+
+<body onload="show();">
+<div class="head1">
+	<div class="shopsign"><img src="images/1.jpg"/>
+    	    	
+     
+	</div>
+    <p class="p1"> 华清<span >工</span>作室</p>
+
+    <div class="photoright">
+        	<p>人生，</p><p>就像一盒巧克力，</p><p>你永远不知到下一块会是什么味道！</p><p>----《阿甘正传》</p>
+    </div>
+</div>
+
+ <div class="diferent">
+     	 <ul>
+         
+        <li><span><a href="首页.html">首页</a></span></li>
+        <li><span><a href="#">工作空间</a></span></li>
+        <li><span><a href="项目规划.html">项目规划</a></span></li>
+        <li><span><a href="餐饮文化1.html" target="_blank">餐饮文化</a></span></li>
+        <li><a href="#">部门组织</a></li>
+        <li><a href="#">发展目标</a></li>
+        <li><span><a href="诚聘精英.html">诚聘精英</a></span></li>
+      </ul>
+     </div>
+     
+     
+     
+     <div class="div1">
+   	   <div class="div1-left">
+            
+            <p class="line1">程序员的三种境界:</p>
+            <div class="div-line2">
+            <p class="line2"><input type="checkbox" name="name2" />第一重：无尽bug常作客，困闷调试伴不眠</p>
+            <p class="line2"><input type="checkbox" name="name2"/>第二重：千行代码过，bug不沾身</p>
+            <p class="line2"><input type="checkbox"  name="name2"/>第三重：代码间，bug灰飞烟灭</p>
+            </div>
+        </div>
+        <div class="div-left2">
+        	<div class="box1">
+            	<p class="box1-line3"><a href="首页.html">参观我们的工作室</a></p>
+                <p class="box1-line4">觉得自己做的到和不做的到，其实只在一念之间。</p>
+            </div>
+            <div class="box2">
+                <span class="box1-line5">or&nbsp;&nbsp;</span>
+                <span class="box1-line6"><a href="诚聘精英.html">加入我们</a></span>
+            </div>
+        </div>
+        
+        
+        
+        
+
+        
+        
+		<div class="div1-right">
+        <!-- 网页开发中，书写css常用class选择器 -->	
+            <div class="lunbo">
+                <div class="container">
+                    <img src="images/2-10.jpg" id="img1" />
+                    <img src="images/2-8.jpg" id="img2" style="display:none;"  />
+                    <img src="images/2-9.jpg" id="img3" style="display:none;"  />
+                    <img src="images/2-7.jpg" id="img4" style="display:none;"  />
+                </div>
+                <div class="btns">
+                    <a href="javascript:show(1)" class="current" id="btn1">1</a>
+                    <a href="javascript:show(2)" class="normal" id="btn2">2</a>
+                    <a href="javascript:show(3)" class="normal" id="btn3">3</a>
+                    <a href="javascript:show(4)" class="normal" id="btn4">4</a>
+                </div>
+            </div>	
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        <div class="div-middle">
+        <a href="项目进程.html">项目进程（点我）</a>
+        </div>
+        
+       
+        
+        
+        
+     	<div class="div-bottom">
+        	<div class="b1">
+            	<img src="images/1-3.jpg"/>
+                	<p class="b1-p1">起来搞小孩&nbsp;&nbsp;&nbsp; <span>7:32</span></p>
+                	<p> 带有文字段落和图标的div随文字段落内容的变化自动垂直居中对齐
+我们在项目中经常会遇到这种情况：文字段落和图标混合在一起，文字的段落的内容是随后端吐给前端的数据自动变化的。</p>
+            </div>
+            <div class="b2">
+            	<img src="images/2-2.jpg" />
+                	<p class="b1-p1">枫叶&nbsp;&nbsp;&nbsp; <span>15:28</span></p>
+                    <p>Java知识体系主要包括基础知识，工具，并发编程，数据结构与算法，数据库，JVM，架构设计，应用框架，中间件，微服务架构，分布式架构，程序员的一些思考，团队与项目管理，运维，权限，区块链等。</p>
+            </div>
+            <div class="b3">
+            	<img src="images/2-3.jpg"/>
+                	<p class="b1-p1">刀锋&nbsp;&nbsp;&nbsp; <span>13:32</span></p>
+                    <p>常用API:<br />Date、DateFormat、Calendar<br />String、StringBuffer、StringBuilder、正则表达式<br />Number、Radom、Math、System、包装类<br />Arrays、Collections</p>
+            </div>
+            <div class="b4">
+            	<img src="images/2-4.jpg"/>
+                	<p class="b1-p1">一杯清水&nbsp;&nbsp;&nbsp; <span>7:26</span></p>
+                    <p>谁说程序猿就一定不解风情，今天就给大家分享一个C++绘制的心形图案，送给你的TA吧，前几天给大家放一个C语言实现心形表白功能的程序,许多小白觉得有意思。</p>
+            </div>
+            <div class="b5">
+            	<img src="images/2-5.jpg"/>
+                	<p class="b1-p1">就是玩&nbsp;&nbsp;&nbsp; <span>8:01</span></p>
+                    <p>map以模板(泛型)方式实现，可以存储任意类型的数据，包括使用者自定义的数据类型。</p>
+            </div>
+            <div class="b6">
+            	<img src="images/2-6.jpg" />
+                	<p class="b1-p1">乔治日记&nbsp;&nbsp;&nbsp; <span>23:22</span></p>
+                    <p>new其实就是告诉计算机开辟一段新的空间，但是和一般的声明不同的是，new开辟的空间在堆上，而一般声明的变量存放在栈上。</p>
+            </div>
+        </div>   
+                    
+
+     </div>
+</body>
+</html>

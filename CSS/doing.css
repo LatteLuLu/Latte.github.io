@@ -1,0 +1,142 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+
+
+
+
+
+
+
+
+
+@font-face{
+	font-family: LTCH;
+	src: url(font/LTCH.TTF);	
+}
+
+*{
+	margin:0;
+	padding:0;}
+body{
+	background-color:#303030;}
+.head1{
+	width:auto;
+	height:100px;
+	background:#418383;
+	margin:0 300px;
+	}
+.shopsign{
+	<!--Logo-->
+	
+	width:300px;
+	height:100px;
+	margin-left:70px;
+	float:left;
+	}
+.shopsign img{
+	border-radius:50%;
+	width:100px;
+	height:100px;
+	margin-right:30px;
+	}
+.p1{
+	background-color:#418383;
+	font-color:#FFF;
+	font-size:24px;
+	padding-top:15px;
+	width:386px;
+		}
+
+.p1 span{
+	<!--工   字-->
+	font-family: LICH;
+	font-size: 50px;
+	font-weight: 900;
+	color:#D95B37;	
+}
+.photoright{
+	font-size:12px;
+	text-align:right;
+	color:#CCC;
+	float:right;
+	width:255px;
+	line-height:25px;
+	margin-top:-80px;
+	}
+
+
+
+
+.diferent{
+	width:auto;
+	height:50px;
+	margin:10px 300px;
+	background-color:#418383;}
+.diferent ul{height:100%;}
+.diferent li{
+	line-height:50px;
+	list-style-type:none;
+	text-align:center;
+	width:120px;
+	height:100%;
+	float:left;
+	color:#000;
+	}
+.diferent li a{ width:100%;height:100%;}
+li:hover{
+	background-color:#F60;}
+	
+
+	
+
+li a{
+	text-decoration:none;
+	font-size:22px;
+	color:#FFF;
+	}
+
+
+
+
+
+
+.div-table{
+	width:936px;
+	margin:0 300px;
+	}
+
+
+
+
+table {
+	 width:100%;
+	   margin:10px auto;        
+	   background-color:#cccccc;
+	   border:1px #000 solid;
+	   border-collapse:collapse;/*为表格设置合并边框模型：*/
+	   text-align:center;
+ }
+ td,th{
+	 font-size:14px;
+	 line-height:20px;
+	 border:2px #000 solid;
+	 padding:10px;
+ }
+ thead tr:first-child{
+	 background-color:#cccccc;
+	 color:red;
+	 font:24px bold;
+ }
+ tbody tr:nth-of-type(odd){
+	 background-color:#ffc;
+	 color:#6600ff;
+ }
+ tbody tr:nth-of-type(even){
+	 background-color:#cf9;
+	 color:#0000ff;
+ }
+ tbody tr:hover{
+	 background-color:#33ffff;
+ }
